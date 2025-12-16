@@ -27,7 +27,7 @@ This will generate a `ssp.war` file in the `target` directory.
 ### Manual Deployment
 1. Copy the `ssp.war` file from the `target` directory to the `webapps` directory of your Tomcat installation.
 2. Start the Tomcat server.
-3. The application will be accessible at `http://localhost:8080/ssp`.
+3. The application will be accessible at `http://localhost:8080/ssp`. If deploying on a VM, replace `localhost` with the VM's public IP address.
 
 ### Docker Deployment
 1. Build the Docker image:
@@ -38,7 +38,7 @@ docker build -t ssp-maven-project .
 ```bash
 docker run -p 8080:8080 ssp-maven-project
 ```
-3. The application will be accessible at `http://localhost:8080/ssp`.
+3. The application will be accessible at `http://localhost:8080/ssp`. If deploying on a VM, replace `localhost` with the VM's public IP address.
 
 ## CI/CD
 This project is configured with a Jenkins pipeline for continuous integration and deployment. The `Jenkinsfile` in the root directory defines the pipeline stages:
@@ -57,7 +57,3 @@ This project is configured with a Jenkins pipeline for continuous integration an
             │   └── web.xml
             └── index.jsp
 ```
-
-## Contact Information
-- **Email**: `shivasai.praveen@gmail.com`
-- **Phone**: `+91-9876543210`
